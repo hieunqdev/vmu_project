@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VMU-Cổng thông tin sinh viên</title>
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/variables.css' %}" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="login">
+        <h4>ĐĂNG NHẬP</h4>
+        <div class="support">
+          <p>Hỗ trợ về email liên hệ Văn phòng CITAD (phòng 108 Nhà A5)</p>
+        </div>
+        <p>
+          <img src="{% static 'assets/img/icon-student-parent.png' %}" alt="" />
+        </p>
+        <div class="form-login">
+          <form action="" method="POST">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" /><br />
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" /><br />
+            <input type="submit" value="ĐĂNG NHẬP" />
+          </form>
+        </div>
+      </div>
+      <div id="news">
+        <h4>TIN TỨC - THÔNG BÁO</h4>
+        {% for types_notification in types_notifications %}
+        <div class="new1">
+          <h3>{{types_notification.name}}</h3>
+          <ul>
+            <li>
+              <a href="news.html"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Điều kiện để Sinh viên được miễn học và miễn thi các Học phần
+                Tiếng Anh (04/10/2022)</a
+              >
+            </li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

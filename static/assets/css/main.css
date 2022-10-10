@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+
+#container {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+#login {
+  line-height: 40px;
+  text-align: center;
+  margin-right: 100px;
+}
+
+#login .form-login input {
+  padding: 1%;
+}
+
+#container .support {
+  color: red;
+  width: 350px;
+}
+
+#news {
+  line-height: 40px;
+}
+
+#news .new1 {
+  border-bottom: 1px solid gray;
+}
+
+#news .new1:last-child {
+  border-bottom: none;
+}
+
+#news .new1 ul li:hover {
+  font-style: italic;
+}
