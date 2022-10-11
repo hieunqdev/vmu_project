@@ -7,10 +7,10 @@ from django.contrib import messages
 # Create your views here.
 class Home(View):
     def get(self, request):
-        users = {
-            'user': request.user
+        context = {
+            'users': request.user
         }
-        return render(request, 'home.html', users)
+        return render(request, 'home.html', context)
     def logout(request):
         auth.logout(request)
         return redirect('/')

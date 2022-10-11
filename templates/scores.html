@@ -1,0 +1,103 @@
+{% load static %} {% include 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/scores.css' %}" />
+<div class="w3-main" style="margin-left: 300px; margin-top: 43px">
+  <header class="w3-container" style="padding-top: 22px">
+    <h5>
+      <b><i class="fa fa-dashboard"></i> BẢNG ĐIỂM</b>
+    </h5>
+  </header>
+
+  <div id="info">
+    <ul>
+      <li>Mã sinh viên: <b>78015</b></li>
+      <li>Họ tên: <b>Nguyen Quang Hieu</b></li>
+      <li>Ngày sinh: <b>11/07/2000</b></li>
+      <li>Giới tính: <b>Nam</b></li>
+      <li>Lớp hành chính: <b>TTM59ĐH</b></li>
+    </ul>
+  </div>
+  <div id="info">
+    <ul>
+      <li>TC Tích lũy: <b>119</b></li>
+      <li>TBC tích lũy: <b>2.61</b></li>
+    </ul>
+  </div>
+
+  <div id="scores_table">
+    <table style="width: 100%">
+      <tr>
+        <th colspan="7">Năm học 2018-2019, Học kỳ I</th>
+      </tr>
+      <tr>
+        <th>Học phần</th>
+        <th>TCHT</th>
+        <th>Công thức</th>
+        <th>X</th>
+        <th>Y</th>
+        <th>Z</th>
+        <th>Điểm chữ</th>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding-left: 10px">
+          11401 - Pháp luật đại cương
+        </td>
+        <td>2</td>
+        <td>0.5 * X1 + 0.5 * Y1</td>
+        <td>7.0</td>
+        <td>5.4</td>
+        <td>6.2</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding-left: 10px">
+          11401 - Pháp luật đại cương
+        </td>
+        <td>2</td>
+        <td>0.5 * X1 + 0.5 * Y1</td>
+        <td>7.0</td>
+        <td>5.4</td>
+        <td>6.2</td>
+        <td>C</td>
+      </tr>
+    </table>
+  </div>
+  <div id="scores_table">
+    <table style="width: 100%">
+      <tr>
+        <th colspan="7">Năm học 2018-2019, Học kỳ I</th>
+      </tr>
+      <tr>
+        <th>Học phần</th>
+        <th>TCHT</th>
+        <th>Công thức</th>
+        <th>X</th>
+        <th>Y</th>
+        <th>Z</th>
+        <th>Điểm chữ</th>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding-left: 10px">
+          11401 - Pháp luật đại cương
+        </td>
+        <td>2</td>
+        <td>0.5 * X1 + 0.5 * Y1</td>
+        <td>7.0</td>
+        <td>5.4</td>
+        <td>6.2</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding-left: 10px">
+          11401 - Pháp luật đại cương
+        </td>
+        <td>2</td>
+        <td>0.5 * X1 + 0.5 * Y1</td>
+        <td>7.0</td>
+        <td>5.4</td>
+        <td>6.2</td>
+        <td>C</td>
+      </tr>
+    </table>
+  </div>
+</div>
+{% endblock content %}

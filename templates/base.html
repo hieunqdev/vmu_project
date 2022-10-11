@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>W3.CSS Template</title>
+    <title>VMU-Cổng thông tin học viên</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -48,7 +48,7 @@
         <div class="w3-col s8 w3-bar">
           <span
             >Cổng Thông tin Học viên
-            <strong>{{user.first_name}} {{user.last_name}}</strong></span
+            <strong>{{users.first_name}} {{users.last_name}}</strong></span
           >
         </div>
       </div>
@@ -71,8 +71,8 @@
           class="w3-bar-item w3-button w3-padding"
           ><i class="fa fa-eye fa-fw"></i>  Chương trình Đào tạo</a
         >
-        <a href="#" class="w3-bar-item w3-button w3-padding"
-          ><i class="fa fa-users fa-fw"></i>  Traffic</a
+        <a href="{% url 'scores' %}" class="w3-bar-item w3-button w3-padding"
+          ><i class="fa fa-users fa-fw"></i>  Bảng điểm</a
         >
         <a href="#" class="w3-bar-item w3-button w3-padding"
           ><i class="fa fa-bullseye fa-fw"></i>  Geo</a

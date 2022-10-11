@@ -1,0 +1,28 @@
+#info {
+  border: 1px solid gray;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+#scores_table {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+
+#scores_table table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#scores_table table tr:hover {
+  background-color: #d3d3d3;
+}

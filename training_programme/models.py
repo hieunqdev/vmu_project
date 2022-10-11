@@ -1,5 +1,5 @@
-from operator import mod
 from django.db import models
+from teacher.models import Teacher
 
 # Create your models here.
 class Department(models.Model):
@@ -30,6 +30,18 @@ class SpecializationClass(models.Model):
     )
     specialization = models.ManyToManyField(Specialization, null=True)
     name = models.CharField(max_length=10, choices=TYPE_OF_TRAINING_CHOICES)
+
+    def __str__(self):
+        return self.name
+
+class Subjects(models.Model):
+    studies = models.CharField(max_length=50, null=True)
+    name = models.CharField(max_length=150)
+    specialization = models.ManyToManyField(Specialization, null=True)
+    credits = models.IntegerField()
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, null=True)
+    create_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
