@@ -20,11 +20,15 @@
         </p>
         <div class="form-login">
           <form action="" method="POST">
+            {% csrf_token %}
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" /><br />
             <label for="password">Password: </label>
             <input type="password" name="password" id="password" /><br />
             <input type="submit" value="ĐĂNG NHẬP" />
+            {% for message in messages %}
+            <p style="color: red">{{message}}</p>
+            {% endfor %}
           </form>
         </div>
       </div>

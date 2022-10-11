@@ -1,0 +1,26 @@
+{% load static %} {% include 'base.html' %} {% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/table.css' %}" />
+<div class="w3-main" style="margin-left: 300px; margin-top: 43px">
+  <header class="w3-container" style="padding-top: 22px">
+    <h5>
+      <b><i class="fa fa-dashboard"></i> Chương trình đào tạo</b>
+    </h5>
+  </header>
+  <div class="w3-row-padding w3-margin-bottom">
+    <table>
+      <tr>
+        <th>Ngành</th>
+        <th>Mã ngành</th>
+        <th>Trình độ</th>
+      </tr>
+      {% for specialization in specializations %}
+      <tr>
+        <td>{{specialization.nganh}}</td>
+        <td>{{specialization.ma_nganh}}</td>
+        <td>{{specialization.trinh_do}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock content %}

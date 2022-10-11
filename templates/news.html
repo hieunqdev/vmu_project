@@ -6,39 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VMU-Thông báo</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css"
-    />
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/news.css' %}" />
   </head>
   <body>
     <div id="container">
-      <h4><a href="{% url 'index' %}">TRANG CHỦ</a></h4>
-      <h4>TIN TỨC - THÔNG BÁO</h4>
+      <div id="menu">
+        <h4><a href="{% url 'index' %}">TRANG CHỦ</a></h4>
+        <h4><a href="{% url 'index' %}">TRANG CHỦ</a></h4>
+      </div>
+      <h4 class="news_notification">TIN TỨC - THÔNG BÁO</h4>
       <br />
-      <table id="example" class="display" style="width: 100%">
-        <thead>
+      <div id="content">
+        <table>
           <tr>
             <th>Ngày tạo</th>
             <th>Ngày cập nhật</th>
             <th>Tiêu đề</th>
             <th>File đính kèm</th>
           </tr>
-        </thead>
-        <tbody>
           {% for notification in notifications %}
           <tr>
             <td>{{notification.create_date}}</td>
@@ -54,9 +39,8 @@
             </td>
           </tr>
           {% endfor %}
-        </tbody>
-      </table>
+        </table>
+      </div>
     </div>
-    <script src="{% static 'assets/js/main.js' %}"></script>
   </body>
 </html>
