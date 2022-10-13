@@ -3,6 +3,7 @@ from django.views import View
 from .models import TypeNotification, Notification
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.contrib.auth import logout
 
 # Create your views here.
 class Home(View):
@@ -11,9 +12,11 @@ class Home(View):
             'users': request.user
         }
         return render(request, 'home.html', context)
-    def logout(request):
-        auth.logout(request)
-        return redirect('/')
+
+    def logout(self, request):
+        logout(request)
+        return redirect('index')
+
 
 class Index(View):
     def get(self, request):
@@ -35,11 +38,14 @@ class Index(View):
             messages.info(request, 'Tài khoản hoặc mật khẩu sai')
             return redirect('/')
 
+
 class News(View):
     def get(self, request):
         notifications = Notification.objects.values('name', 'create_date', 'update_date', 'file_content')
+        users = request.user
         context = {
-            'notifications': notifications
+            'notifications': notifications,
+            'users': users
         }
         return render(request, 'news.html', context)
 

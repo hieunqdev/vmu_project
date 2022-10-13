@@ -39,12 +39,13 @@
           <h3>{{notification.type}}</h3>
           <ul>
             <li>
-              <a href="{% url 'news' %}">{{notification.news}}</a>
+              <a href="#" class="show">{{notification.news}}</a>
             </li>
           </ul>
         </div>
         {% endfor %}
       </div>
     </div>
+    <script src="{% static 'assets/js/news.js' %}"></script>
   </body>
 </html>
