@@ -46,10 +46,12 @@
       <br />
       <div class="w3-container w3-row">
         <div class="w3-col s8 w3-bar">
-          <span
-            >Cổng Thông tin Học viên
-            <strong>{{users.first_name}} {{users.last_name}}</strong></span
-          >
+          <a href="{% url 'home' %}">
+            <span
+              >Cổng Thông tin Học viên
+              <strong>{{users.first_name}} {{users.last_name}}</strong></span
+            >
+          </a>
         </div>
       </div>
       <hr />
@@ -77,17 +79,10 @@
         <a href="{% url 'news' %}" class="w3-bar-item w3-button w3-padding"
           ><i class="fa fa-bullseye fa-fw"></i>  Tin tức - Thông báo</a
         >
-        <a href="{% url 'change_password' %}" class="w3-bar-item w3-button w3-padding"
+        <a
+          href="{% url 'change_password' %}"
+          class="w3-bar-item w3-button w3-padding"
           ><i class="fa fa-diamond fa-fw"></i>  Đổi mật khẩu</a
-        >
-        <a href="#" class="w3-bar-item w3-button w3-padding"
-          ><i class="fa fa-bell fa-fw"></i>  News</a
-        >
-        <a href="#" class="w3-bar-item w3-button w3-padding"
-          ><i class="fa fa-bank fa-fw"></i>  General</a
-        >
-        <a href="#" class="w3-bar-item w3-button w3-padding"
-          ><i class="fa fa-history fa-fw"></i>  History</a
         >
         <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-padding"
           ><i class="fa fa-cog fa-fw"></i>  Đăng xuất</a

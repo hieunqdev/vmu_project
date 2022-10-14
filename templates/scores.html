@@ -26,8 +26,10 @@
   </div>
   <div id="info">
     <ul>
-      <li>TC Tích lũy: <b>119</b></li>
-      <li>TBC tích lũy: <b>2.61</b></li>
+      
+      <li>TC Tích lũy: <b>{{answer_sum}}</b></li>
+      
+      <li>TBC tích lũy: <b>{{answer_average}}</b></li>
     </ul>
   </div>
 
@@ -36,10 +38,10 @@
     <table style="width: 100%">
       {% for score in scores_1styear_term1 %}
       {% if forloop.counter <= 1 %}
-      <tr>
-          
-            <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
-          
+      <tr style="background-color: #d3d3d3;">
+        {% if forloop.counter <= 1 %}
+          <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
+        {% endif %}
       </tr>
       <tr>
         <th>Học phần</th>
@@ -73,10 +75,10 @@
     <table style="width: 100%">
       {% for score in scores_1styear_term2 %}
       {% if forloop.counter <= 1 %}
-      <tr>  
-          {% if forloop.counter <= 1 %}
-            <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
-          {% endif %}
+      <tr style="background-color: #d3d3d3;">
+        {% if forloop.counter <= 1 %}
+          <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
+        {% endif %}
       </tr>
       <tr>
         <th>Học phần</th>
@@ -91,7 +93,7 @@
       {% endfor %}
       {% for score in scores_1styear_term2%}
         <tr>
-          <td style="text-align: left; padding-left: 10px">
+          <td style="text-align: left; padding-left: 10px;">
             {{score.studies}} - {{score.name_subject}}
           </td>
           <td>{{score.credits}}</td>
@@ -110,7 +112,7 @@
     <table style="width: 100%">
       {% for score in scores_2ndyear_term3 %}
       {% if forloop.counter <= 1 %}
-      <tr>
+      <tr style="background-color: #d3d3d3;">
           {% if forloop.counter <= 1 %}
             <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
           {% endif %}
@@ -148,7 +150,7 @@
     <table style="width: 100%">
       {% for score in scores_2ndyear_term4 %}
       {% if forloop.counter <= 1 %}
-      <tr>
+      <tr style="background-color: #d3d3d3;">
           {% if forloop.counter <= 1 %}
             <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
           {% endif %}
@@ -184,7 +186,7 @@
   
   <div id="scores_table">
     <table style="width: 100%">
-      <tr>
+      <tr style="background-color: #d3d3d3;">
             <th colspan="7">Chứng chỉ & Sát hạch</th>
       </tr>
         <tr>

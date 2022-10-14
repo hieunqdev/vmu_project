@@ -37,24 +37,28 @@
     </div>
     <div class="w3-quarter">
       <div class="w3-container w3-teal w3-padding-16">
-        <div class="w3-left">
-          <i class="fa fa-share-alt w3-xxxlarge"></i>
-        </div>
-        <div class="w3-right">
-          <h3>Lịch thi</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Xem</h4>
+        <a href="{% url 'news' %}">
+          <div class="w3-left">
+            <i class="fa fa-share-alt w3-xxxlarge"></i>
+          </div>
+          <div class="w3-right">
+            <h3>Tin tức - Thông báo</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Xem</h4>
+        </a>
       </div>
     </div>
     <div class="w3-quarter">
       <div class="w3-container w3-orange w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>TKB</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Xem</h4>
+        <a href="{% url 'change_password' %}">
+          <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>Đổi mật khẩu</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Xem</h4>
+        </a>
       </div>
     </div>
   </div>
