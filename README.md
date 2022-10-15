@@ -2,6 +2,10 @@
 ---
 Ứng dụng tra cứu thông tin cho học viên Sau đại học thuộc viện đào tạo Sau đại học - trường Đại học Hàng Hải Việt Nam.
 
+## Diagram of Project
+---
+![ERDVmu](screenshots/ERDVmu.drawio.png)
+
 ## Cài đặt:
 ---
 **1.Clone the Repo**
