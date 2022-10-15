@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gq*us36+_wkfgkb9m*&k@@q+8_)zy41%j$$&s1*ps8839(ayd%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -130,7 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+if DEBUG:
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 MEDIA_URL = 'news/media/'
 MEDIA_ROOT = BASE_DIR /'news/media'
@@ -146,5 +149,4 @@ JAZZMIN_SETTINGS = {
     "site_logo": "assets/img/logo-admin.png",
     "copyright": "VMU",
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfilesdeploy')
 django_on_heroku.settings(locals())
