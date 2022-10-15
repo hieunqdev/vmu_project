@@ -147,5 +147,6 @@ JAZZMIN_SETTINGS = {
     "copyright": "VMU",
 }
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 django_on_heroku.settings(locals())
