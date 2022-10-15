@@ -1,15 +1,17 @@
 # VMU - Project
 ---
-Ứng dụng tra cứu thông tin cho học viên Sau đại học thuộc viện đào tạo Sau đại học - trường Đại học Hàng Hải Việt Nam.
+Information search application for postgraduate students of the Graduate Institute - Vietnam Maritime University.
 
 ## Diagram of Project
 ---
 ![ERDVmu](screenshots/ERDVmu.drawio.png)
 
-## Cài đặt:
+## Installation:
 ---
 **1.Clone the Repo**
-`git clone https://github.com/hieunqdev/vmu_project.git`
+```
+git clone https://github.com/hieunqdev/vmu_project.git
+```
 
 **2.Setup venv & Install Requirements**
 ```
@@ -26,4 +28,6 @@ python manage.py migrate
 ```
 
 **5.Start Server**
-`python manage.py runserver`
+```
+python manage.py runserver
+```
