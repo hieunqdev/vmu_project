@@ -1,1 +1,1 @@
-web gunicorn vmu.wsgi:application --log-file -
+web: gunicorn vmu.wsgi:application --log-file -
