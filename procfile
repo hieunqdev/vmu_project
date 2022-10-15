@@ -1,0 +1,1 @@
+web gunicorn vmu.wsgi:application --log-file -
