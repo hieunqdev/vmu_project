@@ -1,13 +1,14 @@
-from typing import ChainMap
-from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # Create your models here.
+
+
 class TypeNotification(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+
 
 class Notification(models.Model):
     name = models.CharField(max_length=150)

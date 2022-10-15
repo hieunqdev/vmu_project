@@ -5,6 +5,8 @@ from django.forms import DateField
 from training_programme.models import Department, Specialization, SpecializationClass, Subjects
 
 # Create your models here.
+
+
 class Student(models.Model):
     GENDER_CHOICES = (
         ('M', 'Nam'),
@@ -32,6 +34,8 @@ class Student(models.Model):
 
     def __str__(self):
         return f'{self.studis} - {self.name}'
+
+
 
 class Scores(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)

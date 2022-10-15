@@ -37,7 +37,7 @@ python manage.py runserver
 ### StudentPage
 ![home](screenshots/home.png)
 ![daotao](screenshots/daotao.png)
-![bangdiem](screenshots/bangdiem.png)
+![bangdiem](screenshots/fixbangdiem.png)
 ![tintuc](screenshots/tintuc.png)
 
 ### AdminPage/TeacherPage

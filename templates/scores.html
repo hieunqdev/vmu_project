@@ -13,7 +13,7 @@
         <li>Mã học viên: <b>{{information.studis}}</b></li>
         <li>Họ tên: <b>{{information.name}}</b></li>
         <li>Ngày sinh: <b>{{information.date_of_birth}}</b></li>
-        {% if infomation.gender == 'M' %}
+        {% if infomation.gender == M %}
           <li>Giới tính: <b>Nam</b></li>
         {% else %}
           <li>Giới tính: <b>Nữ</b></li>
@@ -26,9 +26,7 @@
   </div>
   <div id="info">
     <ul>
-      
       <li>TC Tích lũy: <b>{{answer_sum}}</b></li>
-      
       <li>TBC tích lũy: <b>{{answer_average}}</b></li>
     </ul>
   </div>
@@ -181,6 +179,45 @@
       {% endfor %}
     </table>
   </div>
+
+  <!-- IV -->
+  
+  <div id="scores_table">
+    <table style="width: 100%">
+      {% for score in scores_kp %}
+      {% if forloop.counter <= 1 %}
+      <tr style="background-color: #d3d3d3;">
+          {% if forloop.counter <= 1 %}
+            <th colspan="7">{{score.name_year}}, Học kỳ {{score.term}}</th>
+          {% endif %}
+      </tr>
+      <tr>
+        <th>Học phần</th>
+        <th>TCHT</th>
+        <th>Công thức</th>
+        <th>X</th>
+        <th>Y</th>
+        <th>Z</th>
+        <th>Điểm chữ</th>
+      </tr>
+      {% endif %}
+      {% endfor %}
+      {% for score in scores_kp%}
+        <tr>
+          <td style="text-align: left; padding-left: 10px">
+            {{score.studies}} - {{score.name_subject}}
+          </td>
+          <td>{{score.credits}}</td>
+          <td>0.5 * X1 + 0.5 * Y1</td>
+          <td>{{score.scores_x}}</td>
+          <td>{{score.scores_y}}</td>
+          <td>{{score.scores_z}}</td>
+          <td>{{score.grade}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+
 
   <!-- CC -->
   

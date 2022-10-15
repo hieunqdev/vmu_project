@@ -2,6 +2,8 @@ from django.db import models
 from teacher.models import Teacher
 
 # Create your models here.
+
+
 class Department(models.Model):
     name = models.CharField(max_length=150)
     phone = models.CharField(max_length=50, null=True, blank=True)
@@ -22,6 +24,7 @@ class Specialization(models.Model):
 
     def __str__(self):
         return f'{self.department} - {self.name}'
+
 
 class SpecializationClass(models.Model):
     TYPE_OF_TRAINING_CHOICES = (
@@ -49,6 +52,7 @@ class SchoolYear(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.term}'
+
 
 class Subjects(models.Model):
     studies = models.CharField(max_length=50, null=True)
