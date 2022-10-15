@@ -146,5 +146,5 @@ JAZZMIN_SETTINGS = {
     "site_logo": "assets/img/logo-admin.png",
     "copyright": "VMU",
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 django_on_heroku.settings(locals())
