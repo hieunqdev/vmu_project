@@ -31,3 +31,19 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
+## Screenshots
+---
+### StudentPage
+![home](screenshots/home.png)
+![daotao](screenshots/daotao.png)
+![bangdiem](screenshots/bangdiem.png)
+![tintuc](screenshots/tintuc.png)
+
+### AdminPage/TeacherPage
+![user](screenshots/admin_user.png)
+![notifi](screenshots/admin_notifi.png)
+![scores](screenshots/admin_scores.png)
+![student](screenshots/admin_student.png)
+![teacher](screenshots/admin_teacher.png)
+![subject](screenshots/admin_subject.png)
