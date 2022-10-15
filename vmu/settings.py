@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gq*us36+_wkfgkb9m*&k@@q+8_)zy41%j$$&s1*ps8839(ayd%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -146,5 +146,5 @@ JAZZMIN_SETTINGS = {
     "site_logo": "assets/img/logo-admin.png",
     "copyright": "VMU",
 }
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 django_on_heroku.settings(locals())
