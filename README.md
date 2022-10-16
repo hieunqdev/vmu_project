@@ -4,7 +4,7 @@ Information search application for postgraduate students of the Graduate Institu
 
 ## Diagram of Project
 ---
-![ERDVmu](screenshots/ErdVmu.drawio.png)
+![ERDVmu](screenshots/erpvmu.drawio.png)
 
 ## Installation:
 ---
